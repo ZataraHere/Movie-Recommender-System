@@ -2,7 +2,7 @@
 
 This is a content-based movie recommendation web application built using **Streamlit**. Given a selected movie, it suggests 5 similar movies along with their posters using cosine similarity of movie features.
 
-![Preview](Screenshot-.PNG)
+![Preview](https://github.com/ZataraHere/Movie-Recommender-System/blob/accab9cc78649261b7188055d052a8c6b417dbf9/Screenshot-.PNG)
 ---
 
 ## 🚀 Features
