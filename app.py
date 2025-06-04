@@ -28,10 +28,7 @@ similarity = pickle.load(open('similarity.pkl', 'rb'))
 
 def fetch_poster(movie_id):
     try:
-        api_key = os.environ.get("TMDB_API_KEY")
-        if not api_key:
-            raise ValueError("TMDB_API_KEY is not set in environment variables.")
-        url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}&language=en-US"
+        url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=a77959f0a2d9b98ee3a7d7a2fbf0e1af&language=en-US"
         response = requests.get(url)
         response.raise_for_status()
         data = response.json()
@@ -39,7 +36,6 @@ def fetch_poster(movie_id):
     except Exception as e:
         st.warning(f"Error fetching poster: {e}")
         return "https://via.placeholder.com/500x750?text=No+Image"
-
 
 
 # Recommendation function
