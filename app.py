@@ -6,9 +6,6 @@ import time
 import gdown
 import os
 
-api_key = os.getenv('TMDB_API_KEY')
-
-
 # Load data
 # URLs for your Google Drive files
 movie_dict_url = "https://drive.google.com/uc?id=1xLzmW7_D64UtWpsEzPhuzens8Er39nXD"
@@ -31,7 +28,7 @@ similarity = pickle.load(open('similarity.pkl', 'rb'))
 
 def fetch_poster(movie_id):
     try:
-        url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}&language=en-US"
+        url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=a77959f0a2d9b98ee3a7d7a2fbf0e1af&language=en-US"
         response = requests.get(url)
         response.raise_for_status()
         data = response.json()
